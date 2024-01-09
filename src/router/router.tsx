@@ -1,6 +1,6 @@
 import { Home, Dashboard, LoginPage, RegisterPage, DocsPage, WritersPage, DocumentEditorPage } from "../pages";
 import { Outlet, createBrowserRouter } from "react-router-dom";
-//import { PrivateRoute } from "./PrivateRoute";
+import { PrivateRoute } from "./PrivateRoute";
 import { ErrorPage } from "../shared";
 
 export const router =  createBrowserRouter([
@@ -11,9 +11,9 @@ export const router =  createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: //<PrivateRoute>
+        element: <PrivateRoute>
                     <Dashboard />,
-                // </PrivateRoute>,
+                 </PrivateRoute>,
         errorElement: <ErrorPage />,
         children: [
             {
